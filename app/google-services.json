@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "856034244863",
+    "project_id": "techkart-61ea2",
+    "storage_bucket": "techkart-61ea2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:856034244863:android:2b2f3a9402f9da50def4ca",
+        "android_client_info": {
+          "package_name": "com.example.techkart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "856034244863-1uuvaki2etbb811qifsnh8d5alk7gj7j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8Pf9IB4UtVH-M9NIhbgrqCtSEIDxS5uc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "856034244863-1uuvaki2etbb811qifsnh8d5alk7gj7j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
