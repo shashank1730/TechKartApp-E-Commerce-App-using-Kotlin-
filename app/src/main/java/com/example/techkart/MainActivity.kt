@@ -11,6 +11,7 @@ import com.example.techkart.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
+    var i=0
     private lateinit var navController: NavController
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,6 +26,18 @@ class MainActivity : AppCompatActivity() {
         popupMenu.inflate(R.menu.bottom_nav)
         val menu = popupMenu.menu
         binding.bottomBar.setupWithNavController(menu,navController)
+
+        binding.bottomBar.onItemSelected={
+            when(it){
+                0 -> {
+                    i=0;
+                    navController.navigate(R.id.homeFragment)
+                }
+                1 -> i=1
+                2 -> i=2
+            }
+        }
+
 
         navController.addOnDestinationChangedListener(object : NavController.OnDestinationChangedListener{
             override fun onDestinationChanged(
@@ -41,5 +54,12 @@ class MainActivity : AppCompatActivity() {
 
         })
 
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        if (i==0){
+            finish()
+        }
     }
 }

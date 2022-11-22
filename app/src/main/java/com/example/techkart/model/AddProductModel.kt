@@ -1,5 +1,6 @@
 package com.example.techkart.model
 
+
 data class AddProductModel(val productName:String? = "",
                            val productDescription:String? = "",
                            val productCoverImg:String? = "",

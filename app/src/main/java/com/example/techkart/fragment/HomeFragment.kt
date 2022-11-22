@@ -5,7 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContentProviderCompat.requireContext
+import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.example.techkart.R
 import com.example.techkart.adapter.categoryAdapter
@@ -26,6 +28,11 @@ class HomeFragment : Fragment() {
     ): View? {
         binding = FragmentHomeBinding.inflate(layoutInflater)
 
+
+        val preference = requireContext().getSharedPreferences("info", AppCompatActivity.MODE_PRIVATE)
+
+        if (preference.getBoolean("isCart",false))
+            findNavController().navigate(R.id.action_homeFragment_to_cartFragment)
         getcategory()
         getSliderImage()
         getProducts()
